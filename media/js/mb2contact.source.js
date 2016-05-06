@@ -1,9 +1,9 @@
 /**
- * @package		Mb2 Testimonials
- * @version		1.3.0
+ * @package		Mb2 Contact
+ * @version		1.0.0
  * @author		Mariusz Boloz (http://mb2extensions.com)
- * @copyright	Copyright (C) 2015 Mariusz Boloz (http://mb2extensions.com). All rights reserved
- * @license		Commercial (http://codecanyon.net/licenss)
+ * @copyright	Copyright (C) 2016 Mariusz Boloz (http://mb2extensions.com). All rights reserved
+ * @license		Commercial (http://codecanyon.net/licenses)
 **/ 
  
 jQuery(document).ready(function($){
