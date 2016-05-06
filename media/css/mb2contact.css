@@ -1,0 +1,146 @@
+/**
+ * @package		Mb2 CtMenu
+ * @version		1.0.3
+ * @author		Mariusz Boloz (http://mb2extensions.com)
+ * @copyright	Copyright (C) 2016 Mariusz Boloz (http://mb2extensions.com). All rights reserved
+ * @license		Commercial (http://codecanyon.net/licenses)
+**/
+
+
+
+/* General style */
+
+.mb2contact *,
+.mb2contact *:before,
+.mb2contact *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;	
+}
+
+
+
+
+#mb2contact-ajax-loading {
+	display: none;
+	width: 45px;
+	height: auto;
+	margin-left: 30px;	
+}
+
+
+
+.mb2formgroup {
+	margin: 0 0 30px 0;	
+}
+
+
+/* Column system */
+
+
+.mb2contact-row {
+	margin: 0 -15px;	
+}
+
+.mb2contact-col-1,
+.mb2contact-col-2,
+.mb2contact-col-3 {
+	padding: 0 15px;
+}
+
+
+.mb2contact-col-2,
+.mb2contact-col-3 {
+	float: left;	
+}
+
+.mb2contact-col-2 {
+	width: 50%;		
+}
+
+.mb2contact-col-3 {
+	width: 33.333333333%;		
+}
+
+
+
+
+
+#mb2_name,
+#mb2_email,
+#mb2_subject,
+#mb2_message,
+#mb2_human {
+	width: 100%;	
+}
+
+
+
+/* Clear div */
+
+.mb2contact-row,
+.mb2contact-clr {
+	*zoom: 1;
+}
+
+.mb2contact-row:before,
+.mb2contact-row:after,
+.mb2contact-clr:before,
+.mb2contact-clr:after {
+	display: table;
+	content: "";
+	line-height: 0;
+}
+
+.mb2contact-row:after,
+.mb2contact-clr:after {
+	clear: both;
+}
+
+
+
+
+
+
+/* Messages */
+
+.mb2contact-msg-error,
+.mb2contact-form-message {
+	color: #ff0000;	
+}
+
+.mb2contact-msg-success {
+	color: #33cc66;	
+}
+
+
+.mb2contact-form-field-error {
+	border-color: #ff0000!important;
+}
+
+
+
+
+
+
+@media only screen and (max-width:768px){
+	
+	.mb2contact-row {
+		margin: 0;	
+	}
+	
+	
+	.mb2contact-col-1,
+	.mb2contact-col-2,
+	.mb2contact-col-3 {
+		padding: 0;
+		width: 100%;
+		float: none;		
+	}
+	
+	
+}
+
+
+
+
