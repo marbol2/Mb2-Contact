@@ -10,3 +10,9 @@ Mb2 Contact is Joomla 3+ module to display contact form on your website.
 <li>Lightweight</li>
 <li>Very easy to Use</li>
 </ul>
+# Translation
+<ul>
+<li>en-GB</li>
+<li>fr-FR (by etchenet)</li>
+<li>pl-PL</li>
+</ul>
