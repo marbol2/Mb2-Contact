@@ -7,7 +7,7 @@
 <license>GNU/GPL (http://www.gnu.org/copyleft/gpl.html)</license>
 <authorEmail>mariuszboloz@gmail.com</authorEmail>
 <authorUrl>www.mb2extensions.com</authorUrl>
-<version>1.0.0</version>	
+<version>1.1.0</version>	
 
 <description>MOD_MB2CONTACT_DESCRIPTION</description>
 
@@ -29,6 +29,8 @@
 <languages folder="language">
 	<language tag="en-GB">en-GB.mod_mb2contact.ini</language>
 	<language tag="en-GB">en-GB.mod_mb2contact.sys.ini</language>
+	<language tag="fr-FR">fr-FR.mod_mb2contact.ini</language>
+	<language tag="fr-FR">fr-FR.mod_mb2contact.sys.ini</language>
 	<language tag="pl-PL">pl-PL.mod_mb2contact.ini</language>
 	<language tag="pl-PL">pl-PL.mod_mb2contact.sys.ini</language>
 </languages>
@@ -93,6 +95,7 @@
 			<option value="1">layout1.jpg</option>
 			<option value="2">layout2.jpg</option>
 			<option value="3">layout3.jpg</option>
+			<option value="4">layout4.jpg</option>
 		</field>
 		
 		<field name="uselabel" type="radio" 
@@ -137,7 +140,7 @@
 		<field name="humananquestion" type="text"
 			label="MOD_MB2CONTACT_FIELD_HUMANANQUESTION_LABEL"
 			description=""
-			default="What is the first working day of the week?"
+			default="What is 3 plus 2?"
 			required="true"
 		/>
 		

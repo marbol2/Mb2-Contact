@@ -1,6 +1,6 @@
 /**
  * @package		Mb2 Contact
- * @version		1.0.0
+ * @version		1.1.0
  * @author		Mariusz Boloz (http://mb2extensions.com)
  * @copyright	Copyright (C) 2016 Mariusz Boloz (http://mb2extensions.com). All rights reserved
  * @license		GNU/GPL (http://www.gnu.org/copyleft/gpl.html)
@@ -20,23 +20,72 @@
 
 
 
+/* Genreral style */
 
-#mb2contact-ajax-loading {
-	display: none;
-	width: 45px;
-	height: auto;
-	margin-left: 30px;	
+.mb2contact {
+	position: relative;	
 }
 
 
+
+/* Form fields */
+
+.mb2contact-field {
+	position: relative;	
+}
+
+
+
+/* Ajax response */
+
+.mb2contactmessage {
+	display: block;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 100%;
+}
+
+#mb2contact-ajax-loading {
+	display: none;
+	width: 120px;
+	height: auto;
+	position: absolute;
+	left: 50%;
+	margin-left: -60px;
+	top: 50%;
+	margin-top: -12px;
+	width: 120px;
+	height: 32px;	
+	background-color: #fff;
+	z-index: 3;
+	line-height: 32px;
+	box-shadow: 0 0 20px rgba(0,0,0,.25);
+	-moz-box-shadow: 0 0 20px rgba(0,0,0,.25);
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,.25);
+	-ms-box-shadow: 0 0 20px rgba(0,0,0,.25);
+	-o-box-shadow: 0 0 20px rgba(0,0,0,.25);
+}
+
+#mb2contact-ajax-loading > img {
+	width: 100px;
+	display: block;
+	margin: 10px;	
+}
+
+
+
+/* Form style */
 
 .mb2formgroup {
 	margin: 0 0 30px 0;	
 }
 
 
-/* Column system */
 
+
+
+/* Column system */
 
 .mb2contact-row {
 	margin: 0 -15px;	
@@ -61,9 +110,6 @@
 .mb2contact-col-3 {
 	width: 33.333333333%;		
 }
-
-
-
 
 
 #mb2_name,
@@ -104,6 +150,13 @@
 
 /* Messages */
 
+.mb2contact-form-message {
+	position: absolute;
+	left: 0;
+	top: 100%;	
+}
+
+
 .mb2contact-msg-error,
 .mb2contact-form-message {
 	color: #ff0000;	
@@ -140,7 +193,3 @@
 	
 	
 }
-
-
-
-
