@@ -1,5 +1,5 @@
 # Mb2 Contact | Joomla Ajax Contact Module
-Mb2 Contact is Joomla 3+ module to display contact form on your website.
+Mb2 Contact is Joomla 3+ module to display contact form on your website. Live demo: http://goo.gl/9tjGvj
 # Key Features
 <ul>
 <li>Ajax form</li>
