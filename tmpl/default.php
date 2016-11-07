@@ -1,7 +1,7 @@
 <?php
 /**
  * @package		Mb2 Contact
- * @version		1.1.0
+ * @version		1.1.2
  * @author		Mariusz Boloz (http://mb2extensions.com)
  * @copyright	Copyright (C) 2016 Mariusz Boloz (http://mb2extensions.com). All rights reserved
  * @license		GNU/GPL (http://www.gnu.org/copyleft/gpl.html)
@@ -19,7 +19,7 @@ $formurl = JURI::current();
         	<?php echo JHtml::_('content.prepare', $params->get('beforetext','')); ?>
         </div><!-- //end .mb2contact-beforetext -->
     <?php endif; ?>
-    <form id="mb2contactform" class="" action="<?php echo $formurl; ?>" method="post"> 
+    <form id="mb2contactform" class="" action="<?php echo $formurl; ?>" method="post" <?php echo modMb2contactHelper::formData($params,array('modid'=>$module->id)); ?>> 
 		<?php if ($params->get('formlayout',1) == 2) : ?>
         	<div class="mb2contact-row">
                 <div class="mb2contact-col-2">

@@ -1,6 +1,6 @@
 /**
  * @package		Mb2 Contact
- * @version		1.1.0
+ * @version		1.1.2
  * @author		Mariusz Boloz (http://mb2extensions.com)
  * @copyright	Copyright (C) 2016 Mariusz Boloz (http://mb2extensions.com). All rights reserved
  * @license		GNU/GPL (http://www.gnu.org/copyleft/gpl.html)
@@ -14,8 +14,9 @@ jQuery(document).ready(function($){
 		
 		e.preventDefault();
 		
-		var form = $(this);		
-		var formAction = form.attr('action') + '?option=com_ajax&module=mb2contact&method=sendEmail&format=raw';
+		var form = $(this);
+		var modId = form.data('modid');		
+		var formAction = form.attr('action') + '?option=com_ajax&module=mb2contact&method=sendEmail&modid=' + modId + '&format=raw';
 		var messageDiv = $('.mb2contactmessage');
 		var loadingImg = $('#mb2contact-ajax-loading');
 		var formButton = form.find('#mb2contact-formbtn');

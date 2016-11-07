@@ -1,7 +1,7 @@
 <?php
 /**
  * @package		Mb2 Contact
- * @version		1.1.0
+ * @version		1.1.2
  * @author		Mariusz Boloz (http://mb2extensions.com)
  * @copyright	Copyright (C) 2016 Mariusz Boloz (http://mb2extensions.com). All rights reserved
  * @license		GNU/GPL (http://www.gnu.org/copyleft/gpl.html)
@@ -32,7 +32,8 @@ abstract class modMb2contactHelper
 		
 		
 		// Get module params
-		$module = JModuleHelper::getModule('mod_mb2contact');
+		$jInput = JFactory::getApplication()->input;
+		$module = JModuleHelper::getModule('mod_mb2contact',self::getModuleTitle($jInput->get('modid')));
 		$mparams = new JRegistry($module->params);
 		
 		
@@ -93,6 +94,24 @@ abstract class modMb2contactHelper
 	
 	
 	
+	/*
+	 *
+	 * Method to get module title by module id
+	 *
+	 */
+	public static function getModuleTitle($id=0)
+	{
+		
+		$db = JFactory::getDBO();
+		
+		$query = "SELECT `title` FROM #__modules WHERE client_id=0 AND id=" . $id;
+		$db->setQuery($query);
+		return $db->loadResult();		
+		
+	}
+	
+	
+	
 	
 	/*
 	 *
@@ -134,9 +153,11 @@ abstract class modMb2contactHelper
 			$output .= '<div class="mb2contact-field"><textarea name="mb2_message" id="mb2_message"' . $placeholder . '></textarea></div>';
 			break;
 			
-			case 'human':			
-			$output .= '<div class="mb2contact-label mb2contact-human-label"><label for="mb2_human">' . $params->get('humananquestion', 'What is 3 plus 2?') . '</label></div>';	
-			$output .= '<div class="mb2contact-field mb2contact-human-input"><input name="mb2_human" id="mb2_human" type="text" value=""></div>';
+			case 'human':	
+			$placeholder = $params->get('usehumanlabel',1) == 0 ? ' placeholder="' . $params->get('humananquestion', 'What is 3 plus 2?') . '"' : '';		
+			$output .= $params->get('usehumanlabel',1) == 1 ? 
+			'<div class="mb2contact-label mb2contact-human-label"><label for="mb2_human">' . $params->get('humananquestion', 'What is 3 plus 2?') . '</label></div>' : '';	
+			$output .= '<div class="mb2contact-field mb2contact-human-input"><input name="mb2_human" id="mb2_human" type="text" value=""' . $placeholder . '></div>';
 			break;
 			
 			case 'copy':
@@ -194,12 +215,12 @@ abstract class modMb2contactHelper
 	 * Method to get facts data attribs
 	 *
 	 */
-	public static function moduleData(&$params, $attribs = array()) 
+	public static function formData(&$params, $attribs = array()) 
 	{
 		
 		$output = '';
 		
-		$output .= ' data-aspeed="' . $params->get('aspeed',1000) . '"';
+		$output .= ' data-modid="' . $attribs['modid'] . '"';
 		
 		return $output;
 	}
